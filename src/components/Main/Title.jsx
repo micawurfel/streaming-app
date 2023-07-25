@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/authContext";
+import React from "react";
 
 export const Title = (props) => {
-  return <div>{props.title}</div>;
-};
+  return (
+    <h1 className="text-center h1 my-3">{props.title}</h1>
+  )
+}
+
