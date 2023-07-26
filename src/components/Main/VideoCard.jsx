@@ -9,7 +9,7 @@ import { Thumbnail } from "./Thumbnail";
 export const VideoCard = ({video}) => {
 
   return (
-    <div className="cardVideo p-1 m-1"  key={video.id}>
+    <div className="cardVideo p-1 m-1" style={{width: "340px", height: "350px"}} key={video.id}>
 
         <Thumbnail thumbnail={video.thumbnail}/>
         

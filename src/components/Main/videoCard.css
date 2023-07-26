@@ -1,14 +1,9 @@
-.cardVideo{
+/* .cardVideo{
     width: 340px;
     height: 350px;
-}
+} */
 
 .thumbnail{
-    width: 330px;
-    height: 200px;
-}
-
-.video-thumbnail{
     width: 330px;
     height: 200px;
 }
@@ -36,3 +31,19 @@
     width: 40px;
     height: 40px;
 }
+
+/* ---------------------------------------------------------- 
+@media only screen and (min-width: 1200px) {
+.cardVideo{
+    width:200px;
+    height: 350px;
+    background-color: aquamarine;
+    
+} 
+}
+
+@media only screen and (min-width: 576px) {
+    // volver hacer algo
+}
+
+*/

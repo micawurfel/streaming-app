@@ -6,16 +6,28 @@ export function Thumbnail(props) {
 
     const [hover, setHover] = useState(false)
 
+    let timeOut
+    const handelMouseEnter = () =>{
+      timeOut = setTimeout(()=>{
+        setHover(true)
+      }, 1000)
+    }
+
+    const handelMouseLeave = () => {
+      clearTimeout(timeOut)
+      setHover(false)
+    }
+
   return (
     <div className='thumbnail' 
-        onMouseEnter={() => setHover(true)} 
-        onMouseLeave={() => setHover(false)}
+        onMouseEnter={handelMouseEnter} 
+        onMouseLeave={handelMouseLeave}
         >
         
         {hover === true ?
             <ReactPlayer 
-            className='video-thumbnail'
-            url={prueba}
+            url={prueba} 
+            // url={props.url}
             loop
             playing
             width='330px'
