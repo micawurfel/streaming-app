@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 
-export const Register = () => {
+const Register = () => {
   const [user, setUser] = useState({
     // name: "",
     // lastname: "",

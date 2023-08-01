@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 
-export const Login = () => {
+const Login = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -12,7 +12,7 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
-    setUser({ ...user, [name]: value });
+    // setUser({ ...user, [name]: value });
   };
 
   const handleSubmit = async (e) => {

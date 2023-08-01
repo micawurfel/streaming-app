@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import { Login } from "./components/Auth/Login";
 // import { Register } from "./components/Auth/Register";
-import { AuthProvider } from "./context/authContext";
+// import { AuthProvider } from "./context/authContext";
 import HomePage from "./components/Main/HomePage";
 
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
 
-      <AuthProvider>
+      {/* <AuthProvider> */}
         
         <Router>
           <Routes>
@@ -23,7 +23,7 @@ function App() {
             <Route path="/register" element={<Register />} /> */}
           </Routes>
         </Router>
-      </AuthProvider>
+      {/* </AuthProvider> */}
     </div>
   );
 }
