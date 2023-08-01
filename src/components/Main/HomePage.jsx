@@ -1,12 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Title } from './Title'
-import { VideoList } from './VideoList'
-
+import {VideoList} from './VideoList'
+import { ApiService } from '../../services/ApiService'
 
 function HomePage() {
-    
+
+    const apiService = new ApiService()
     const [videos, setVideos] = useState([])
-      
+    async function getVideos(){
+        const response = await apiService.getVideos()
+        setVideos(response.videos)
+    }
+    useEffect(()=>{
+        getVideos()
+    })
+
   return (
     <>
         <div className='row'>
