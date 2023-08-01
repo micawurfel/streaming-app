@@ -1,0 +1,49 @@
+/* .cardVideo{
+    width: 340px;
+    height: 350px;
+} */
+
+.thumbnail{
+    width: 330px;
+    height: 200px;
+}
+
+.infoBox{
+    width: 340px;
+}
+
+.title{
+    width: 250px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.author{
+    color: rgb(75,75,75);
+}
+.description{
+    color: rgb(75,75,75);
+    margin-top: -16px;
+}
+.avatar{
+    width: 40px;
+    height: 40px;
+}
+
+/* ---------------------------------------------------------- 
+@media only screen and (min-width: 1200px) {
+.cardVideo{
+    width:200px;
+    height: 350px;
+    background-color: aquamarine;
+    
+} 
+}
+
+@media only screen and (min-width: 576px) {
+    // volver hacer algo
+}
+
+*/
