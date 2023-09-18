@@ -4,16 +4,13 @@ class VideoRepository {
   constructor() {}
 
   async getDbClient() {
-    return await connectDB();
+    const client = await connectDB();
+    return client.db("video-streming");
   }
 
   async getAllVideos() {
-    const client = await this.getDbClient();
-    return await client
-      .db("video-streming")
-      .collection("videos")
-      .find()
-      .toArray();
+    const db = await this.getDbClient();
+    return await db.collection("videos").find().toArray();
   }
 }
 
