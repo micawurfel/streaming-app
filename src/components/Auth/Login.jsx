@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/authContext";
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../context/authContext'
 
 const Login = () => {
   const [user, setUser] = useState({
-    email: "",
-    password: "",
-  });
+    email: '',
+    password: ''
+  })
 
-  const { login } = useAuth();
-  const navigate = useNavigate();
+  const { login } = useAuth()
+  const navigate = useNavigate()
 
   const handleChange = ({ target: { name, value } }) => {
     // setUser({ ...user, [name]: value });
-  };
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await login(user.email, user.password);
-      navigate("/");
+      await login(user.email, user.password)
+      navigate('/')
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   return (
     <>
@@ -61,5 +61,5 @@ const Login = () => {
         <button className="btn btn-primary">LogIn</button>
       </form>
     </>
-  );
-};
+  )
+}

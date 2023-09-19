@@ -1,8 +1,8 @@
 import React from 'react'
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Tooltip from 'react-bootstrap/Tooltip'
 
-export function VideoTitle(video) {
+export function VideoTitle (video) {
   return (
     <OverlayTrigger
           placement='bottom-end'
@@ -14,6 +14,6 @@ export function VideoTitle(video) {
         >
         <h1 className="title h6"> {video.title}</h1>
         </OverlayTrigger>
-    
+
   )
 }

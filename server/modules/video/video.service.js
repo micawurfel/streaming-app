@@ -1,11 +1,11 @@
-const VideoRepository = require("./video.repository");
+const VideoRepository = require('./video.repository')
 
 class VideoService {
-  videoRepository = new VideoRepository();
+  videoRepository = new VideoRepository()
 
-  async getAllVideos() {
-    return await this.videoRepository.getAllVideos();
+  async getAllVideos () {
+    return await this.videoRepository.getAllVideos()
   }
 }
 
-module.exports = new VideoService();
+module.exports = new VideoService()

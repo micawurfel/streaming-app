@@ -1,12 +1,12 @@
-async function createCollections(client) {
-  const db = client.db("video-streming");
+async function createCollections (client) {
+  const db = client.db('video-streming')
 
   try {
     // Create collections here
-    await db.createCollection("videos");
+    await db.createCollection('videos')
   } catch (error) {
-    console.error("Error creating collections:", error);
+    console.error('Error creating collections:', error)
   }
 }
 
-module.exports = createCollections;
+module.exports = createCollections

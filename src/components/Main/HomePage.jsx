@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Title } from './Title'
-import {VideoList} from './VideoList'
+import { VideoList } from './VideoList'
 import { ApiService } from '../../services/ApiService'
 
-function HomePage() {
-
-    const apiService = new ApiService()
-    const [videos, setVideos] = useState([])
-    async function getVideos(){
-        const response = await apiService.getVideos()
-        setVideos(response.videos)
-    }
-    useEffect(()=>{
-        getVideos()
-    })
+function HomePage () {
+  const apiService = new ApiService()
+  const [videos, setVideos] = useState([])
+  async function getVideos () {
+    const response = await apiService.getVideos()
+    setVideos(response.videos)
+  }
+  useEffect(() => {
+    getVideos()
+  })
 
   return (
     <>
@@ -28,12 +27,12 @@ function HomePage() {
                 <Title title="Sidebar"></Title>
             </div>
             <div className='col'>
-                <div className='row'>    
+                <div className='row'>
                     <Title title="TITULO"></Title>
                 </div>
-                <div className='row'>    
+                <div className='row'>
                     <VideoList videos={videos}/>
-                </div>    
+                </div>
             </div>
         </div>
     </>

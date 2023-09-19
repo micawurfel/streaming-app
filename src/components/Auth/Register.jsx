@@ -1,32 +1,32 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/authContext";
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../context/authContext'
 
 const Register = () => {
   const [user, setUser] = useState({
     // name: "",
     // lastname: "",
-    email: "",
+    email: '',
     // user: "",
-    password: "",
-  });
+    password: ''
+  })
 
-  const { signup } = useAuth();
-  const navigate = useNavigate();
+  const { signup } = useAuth()
+  const navigate = useNavigate()
 
   const handleChange = ({ target: { name, value } }) => {
-    setUser({ ...user, [name]: value });
-  };
+    setUser({ ...user, [name]: value })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await signup(user.email, user.password);
-      navigate("/");
+      await signup(user.email, user.password)
+      navigate('/')
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   return (
     <>
@@ -75,5 +75,5 @@ const Register = () => {
         <button className="btn btn-primary">Register</button>
       </form>
     </>
-  );
-};
+  )
+}
