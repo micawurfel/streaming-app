@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth } from '../../context/authContext'
 
-const Login = () => {
+export default const Login = () => {
   const [user, setUser] = useState({
     email: '',
     password: ''
   })
 
-  const { login } = useAuth()
   const navigate = useNavigate()
 
   const handleChange = ({ target: { name, value } }) => {

@@ -4,10 +4,11 @@ const bodyParser = require('body-parser')
 const videoRouter = require('./router/videoRouter')
 const { connectDB } = require('./modules/database/config')
 
+require('dotenv').config()
+console.log(process.env.PORT)
+
 async function run () {
   await connectDB()
-
-  const PORT = 3001
 
   app.use(bodyParser.urlencoded({ extends: true }))
 
@@ -15,8 +16,8 @@ async function run () {
 
   app.use('/', videoRouter)
 
-  app.listen(PORT, () => {
-    console.log(`el servidor esta escuchando en el puerto ${PORT}`)
+  app.listen(process.env.PORT, () => {
+    console.log(`the server is listening on port ${process.env.PORT}`)
   })
 }
 

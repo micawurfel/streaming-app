@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth } from '../../context/authContext'
 
-export function Home () {
-  // const authContext = useAuth()
-  const { user } = useAuth()
-
+export function Home() {
   return (
     <>
       <h1>Home</h1>
