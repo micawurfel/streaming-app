@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
 import prueba from '../../assets/videos/video-prueba.mp4'
 
-export function Thumbnail (props) {
+export default function Thumbnail(props) {
   const [hover, setHover] = useState(false)
 
   let timeOut
@@ -19,22 +19,22 @@ export function Thumbnail (props) {
 
   return (
     <div className='thumbnail'
-        onMouseEnter={handelMouseEnter}
-        onMouseLeave={handelMouseLeave}
-        >
+      onMouseEnter={handelMouseEnter}
+      onMouseLeave={handelMouseLeave}
+    >
 
-        {hover === true
-          ? <ReactPlayer
-            url={prueba}
-            // url={props.url}
-            loop
-            playing
-            width='330px'
-            height= '200px'
-            muted
-            />
-          : <img src={props.thumbnail} alt="" className='thumbnail rounded'/>
-        }
+      {hover === true
+        ? <ReactPlayer
+          url={prueba}
+          // url={props.url}
+          loop
+          playing
+          width='330px'
+          height='200px'
+          muted
+        />
+        : <img src={props.thumbnail} alt="" className='thumbnail rounded' />
+      }
 
     </div>
   )

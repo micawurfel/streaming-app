@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export function Home () {
+export default function Buttons() {
   return (
     <>
-      <h1>Home</h1>
       <Link to={'/login'}>
         <button className="btn btn-primary">LogIn</button>
       </Link>

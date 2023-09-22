@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import VideoDetail from './VideoDetail'
-import { ApiService } from '../../services/ApiService'
+import VideoDetail from '../components/Video/VideoDetail'
+import { ApiService } from '../services/ApiService'
 import { useParams } from 'react-router'
 
-export default function VideoDetailContainer () {
+export default function VideoDetailContainer() {
   const apiService = new ApiService()
 
   const [video, setVideo] = useState({})
   const { id } = useParams()
 
-  async function getVideos () {
+  async function getVideos() {
     const response = await apiService.getVideos()
     response.videos.forEach(element => {
       if (Number(id) === element.id) {
@@ -25,8 +25,8 @@ export default function VideoDetailContainer () {
   }, [id])
 
   return (
-        <>
-            <VideoDetail video={video} />
-        </>
+    <>
+      <VideoDetail video={video} />
+    </>
   )
 }

@@ -6,11 +6,13 @@ This project was created using create-react-up
 
 react-router-dom
 react-icons
+reac-player
 bootstrap
 
 ## Server
 
 express
 body-parser
+router
 mongose
 dotenb

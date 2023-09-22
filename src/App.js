@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import { Login } from './components/Auth/Login'
-// import { Register } from './components/Auth/Register'
-import HomePage from './components/Main/HomePage'
-import VideoDetailContainer from './components/Video/VideoDetailContainer'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import HomePage from './pages/HomePage'
+import VideoDetailContainer from './pages/VideoDetailContainer'
 
 function App () {
   return (
@@ -11,8 +11,8 @@ function App () {
       <Routes>
         <Route path="/" element={ <HomePage/> }/>
         <Route path='/video/:id' element={ <VideoDetailContainer/> } />
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   )
