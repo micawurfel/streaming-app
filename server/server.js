@@ -16,7 +16,7 @@ async function run () {
   app.use(bodyParser.json())
 
   app.use('/', videoRouter)
-  app.use('/', authRouter)
+  // app.use('/', authRouter)  
 
   app.listen(process.env.PORT, () => {
     console.log(`the server is listening on port ${process.env.PORT}`)
