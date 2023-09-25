@@ -3,7 +3,7 @@ import VideoDetail from '../components/Video/VideoDetail'
 import { ApiService } from '../services/ApiService'
 import { useParams } from 'react-router'
 
-export default function VideoDetailContainer() {
+export default function VideoPage() {
   const apiService = new ApiService()
 
   const [video, setVideo] = useState({})

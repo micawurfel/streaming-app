@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const Video = require('../modules/database/models/video')
-const VideoController = require('../modules/video/video.controller')
+// const VideoController = require('../modules/video/video.controller')
 
-router.get('/videos', [], VideoController.getAllVideos)
-router.get('/videos/:videoId', [], VideoController.getByVideoById)
+// router.get('/videos', [], VideoController.getAllVideos)
+// router.get('/videos/:videoId', [], VideoController.getByVideoById)
 
 // get ALL videos
 router.get('/video', async (req, res) => {

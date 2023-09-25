@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Title from '../components/Main/Title'
 import VideoList from '../components/Main/VideoList'
 import { ApiService } from '../services/ApiService'
-import Buttons from '../components/Auth/Buttons'
+import Navbar from '../components/Layout/Navbar'
+import Aside from '../components/Layout/Aside'
+import Footer from '../components/Layout/Footer'
 
 export default function HomePage() {
   const apiService = new ApiService()
@@ -19,14 +21,13 @@ export default function HomePage() {
     <>
       <div className='row'>
         <div className='col '>
-          <Title title="Navbar"></Title>
-          <Buttons />
+          <Navbar />
         </div>
       </div>
 
       <div className='row'>
         <div className='col-0 col-sm-2'>
-          <Title title="Sidebar"></Title>
+          <Aside />
         </div>
         <div className='col'>
           <div className='row'>
@@ -35,6 +36,11 @@ export default function HomePage() {
           <div className='row'>
             <VideoList videos={videos} />
           </div>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col '>
+          <Footer />
         </div>
       </div>
     </>

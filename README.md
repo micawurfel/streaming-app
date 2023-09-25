@@ -4,10 +4,12 @@ This project was created using create-react-up
 
 ## Client
 
+eslint
 react-router-dom
 react-icons
-reac-player
+react-player
 bootstrap
+react-bootstrap
 
 ## Server
 
@@ -15,4 +17,4 @@ express
 body-parser
 router
 mongose
-dotenb
+dotenv

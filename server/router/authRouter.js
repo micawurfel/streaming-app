@@ -6,7 +6,7 @@ router.get('/login', async (req, res) => {
   const { email } = req.body
   const emailExist = await User.findOne({ email })
   if (emailExist) {
-    res.sendStatus(201).json('va')
+    res.sendStatus(201).json('valid')
   } else {
     res.sendStatus(400).json('the email doesnt exist')
   }
@@ -19,3 +19,5 @@ router.post('/register', async (req, res) => {
     password
   }))
 })
+
+module.exports = router
