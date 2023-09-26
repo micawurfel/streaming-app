@@ -16,7 +16,15 @@ class VideoController {
     res.status(200).json({ video: {} })
   }
 
-  async addVideo (req, res) {}
+  async create (req, res) {
+    try {
+      const {title, description, author, url} = req.body
+      const result = await videoService.create({title, description, author, url})
+      res.status(200).json(result)
+    } catch (error) {
+      res.status(500).json({error: error.message})
+    }
+  }
 }
 
 module.exports = new VideoController()

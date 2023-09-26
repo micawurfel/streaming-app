@@ -1,16 +1,16 @@
 const { connectDB } = require('../database/config')
+const Video = require('../database/models/video')
 
 class VideoRepository {
   constructor () {}
 
-  async getDbClient () {
-    const client = await connectDB()
-    return client.db('video-streming')
+  async create (input) {
+    return await Video.create(
+      input
+    )
   }
-
   async getAllVideos () {
     const db = await this.getDbClient()
-    return await db.collection('videos').find().toArray()
   }
 }
 

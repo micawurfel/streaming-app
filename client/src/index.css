@@ -27,13 +27,16 @@ img, picture, video, iframe, figure{
 }
 
 /* Enlaces */
+p a, p i{
+  display: inline;
+  color: inherit;
+  text-decoration: none;
+}
 
 a{ 
   display: block;
-}
-
-p a, p i{
-  display: inline;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Listas */
@@ -84,4 +87,4 @@ form, input, textarea, label, button{
       --color-primary: black;
       --color-secundary: white;
   }
-}
+} 

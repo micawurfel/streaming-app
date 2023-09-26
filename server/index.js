@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+require('dotenv').config()
 const bodyParser = require('body-parser')
 
 const videoRouter = require('./router/videoRouter')
@@ -8,7 +9,6 @@ const authRouter = require('./router/authRouter')
 // const { connectDB } = require('./modules/database/config')
 const {db} = require('./modules/database/configNew')
 
-require('dotenv').config()
 
 // async function run () {
 //   await connectDB()
