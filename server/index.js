@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())
 
-app.use('/', videoRouter)
+app.use('/video', videoRouter)
 app.use('/user', userRouter)
 
 app.listen(process.env.PORT, () => {
