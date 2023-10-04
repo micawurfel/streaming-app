@@ -14,7 +14,7 @@ class VideoRepository {
   }
 
   async updateVideo (id, input) {
-    return await Video.findByIdAndUpdate(id, input)
+    return await Video.findByIdAndUpdate(id, input, { new: true })
   }
 
   async deleteVideo (id) {
