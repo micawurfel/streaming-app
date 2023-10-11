@@ -1,0 +1,21 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: blanchedalmond;
+  margin-bottom: 1em;
+}
+
+.logo{
+  margin: 10px;
+}
+
+.form{
+  display: flex;
+}
+
+.input{
+  border: solid black 1px;
+  border-radius: 0.5em;
+  background-color: white;
+  margin: 10px;
+}

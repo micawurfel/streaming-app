@@ -33,7 +33,7 @@ export default function Thumbnail(props) {
           height='200px'
           muted
         />
-        : <img src={props.thumbnail} alt="" className='thumbnail rounded' />
+        : <img src={props.thumbnail} alt="" className='thumbnail' />
       }
 
     </div>

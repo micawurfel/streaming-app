@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuthContext } from '../../context/authContext'
-import './formStyle.css'
+import styles from './Form.module.css'
 
 export default function Form(props) {
   const { handleEmailChange, handlePasswordChange } = useAuthContext()
@@ -8,36 +8,34 @@ export default function Form(props) {
   return (
     <>
       <form
-        className="form bg-primary-subtle"
+        className={styles.form}
         onSubmit={props.event}
       >
-        <h1 className="h3">{props.title}</h1>
+        <h1 className={styles.title}>{props.title}</h1>
 
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            className="form-control"
-            onChange={handleEmailChange}
-          />
-        </div>
+        <label htmlFor="email" className={styles.label}>
+          Email
+        </label>
+        <input
+          type="email"
+          name="email"
+          placeholder='john@gmail.com'
+          className={styles.input}
+          onChange={handleEmailChange}
+        />
 
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            className="form-control"
-            onChange={handlePasswordChange}
-          />
-        </div>
+        <label htmlFor="password" className={styles.label}>
+          Password
+        </label>
+        <input
+          type="password"
+          name="password"
+          placeholder='********'
+          className={styles.input}
+          onChange={handlePasswordChange}
+        />
 
-        <button className="btn btn-primary">{props.title}</button>
+        <button className={styles.button}>{props.title}</button>
       </form>
     </>
   )

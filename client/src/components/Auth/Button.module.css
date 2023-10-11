@@ -1,0 +1,7 @@
+.button{
+  display: inline;
+  background-color: aquamarine;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 0.5em;
+}
