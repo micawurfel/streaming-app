@@ -16,5 +16,6 @@ react-bootstrap
 express
 body-parser
 router
-mongose
+mongoose
 dotenv
+eslint

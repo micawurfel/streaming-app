@@ -1,29 +1,14 @@
-const { MongoClient } = require('mongodb')
-const createCollections = require('./create-collections')
+const mongoose = require('mongoose')
 
-let client // Declare the client object at the module level. (Singleton Pattern)
+const dbUrl = process.env.DB_URL
 
-async function connectDB () {
-  try {
-    if (!client) {
-      const options = {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      }
-      const uri = 'mongodb://127.0.0.1:27017'
-      client = new MongoClient(uri, options)
-      const db = client.db('video-streming')
-      const collections = await db.listCollections().toArray()
-      if (!collections || collections.length === 0) {
-        await createCollections(client)
-      }
-      await client.connect()
-    }
+mongoose.connect(dbUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+  .then(() => console.log('Success conection to MongoDB'))
+  .catch((error) => console.error('Error to conect to MongoDB:', error))
 
-    return client
-  } catch (error) {
-    throw new Error('Error trying to connect to database', error.message)
-  }
-}
+const db = mongoose.connection
 
-module.exports = { connectDB }
+module.exports = db
