@@ -17,15 +17,15 @@ export default function HomePage() {
 
   return (
     <>
-      <div className='row'>
-        <div className='col-0 col-sm-2'>
+      <div>
+        <div>
           <Aside />
         </div>
-        <div className='col'>
-          <div className='row'>
+        <div>
+          <div>
             <Title title="TITULO"></Title>
           </div>
-          <div className='row'>
+          <div>
             <VideoList videos={videos} />
           </div>
         </div>

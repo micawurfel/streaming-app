@@ -2,15 +2,16 @@ import React from 'react'
 import ButtonAuth from '../Auth/ButtonAuth'
 import { Link } from 'react-router-dom'
 import { BsSearch } from 'react-icons/bs'
+import styled from './Navbar.module.css'
 
 export default function Navbar() {
   return (
-    <nav className='d-flex justify-content-between'>
+    <nav className={styled.nav}>
       <Link to={'/'}>
-        <h1> LOGO </h1>
+        <h1 className={styled.logo}> LOGO </h1>
       </Link>
-      <form className='d-flex'>
-        <input type="text" placeholder='Serch' />
+      <form className={styled.form}>
+        <input className={styled.input} type="text" placeholder='Serch' />
         <button><BsSearch /></button>
       </form>
       <ButtonAuth to={'/login'} title="Login" />

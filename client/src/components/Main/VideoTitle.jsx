@@ -12,7 +12,7 @@ export default function VideoTitle(video) {
         </Tooltip>
       }
     >
-      <h1 className="title h6"> {video.title}</h1>
+      <h1 className="title"> {video.title}</h1>
     </OverlayTrigger>
 
   )
