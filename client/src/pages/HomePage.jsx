@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Title from '../components/Main/Title'
 import VideoList from '../components/Main/VideoList'
 import { ApiService } from '../services/ApiService'
 import Aside from '../components/Layout/Aside'
@@ -17,19 +16,8 @@ export default function HomePage() {
 
   return (
     <>
-      <div>
-        <div>
-          <Aside />
-        </div>
-        <div>
-          <div>
-            <Title title="TITULO"></Title>
-          </div>
-          <div>
-            <VideoList videos={videos} />
-          </div>
-        </div>
-      </div>
+      <Aside />
+      <VideoList videos={videos} />
     </>
   )
 }
