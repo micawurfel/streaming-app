@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import VideoList from '../components/Main/VideoList'
-import { ApiService } from '../services/ApiService'
 import Aside from '../components/Layout/Aside'
+import { useVideoContext } from '../context/videoContext'
 
 export default function HomePage() {
-  const apiService = new ApiService()
-  const [videos, setVideos] = useState([])
-  async function getVideos() {
-    const response = await apiService.getVideos()
-    setVideos(response.videos)
-  }
-  useEffect(() => {
-    getVideos()
-  })
+  const { videos } = useVideoContext()
 
   return (
     <>
-      <Aside />
-      <VideoList videos={videos} />
+      <section>
+        <Aside />
+        <VideoList videos={videos} />
+      </section>
     </>
   )
 }

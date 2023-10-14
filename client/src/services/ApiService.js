@@ -1,5 +1,7 @@
+import videos from './videos.json'
+
 export class ApiService {
   async getVideos () {
-    return []
+    return await videos
   }
 }

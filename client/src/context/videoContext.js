@@ -1,11 +1,22 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { ApiService } from '../services/ApiService'
 
 export const VideoContext = createContext({})
 
 export const useVideoContext = () => useContext(VideoContext)
 
 export default function VideoContextProvider({ children }) {
+  const apiService = new ApiService()
+  const [videos, setVideos] = useState([])
+  async function getVideos() {
+    const response = await apiService.getVideos()
+    setVideos(response.videos)
+  }
+  useEffect(() => {
+    getVideos()
+  })
+
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [author, setAuthor] = useState('')
@@ -73,7 +84,7 @@ export default function VideoContextProvider({ children }) {
   }
 
   return (
-    <VideoContext.Provider value={{ createVideo, editVideo, handleTitleChange, handleDescriptionChange, handleAuthorChange, handleUrlChange }}>
+    <VideoContext.Provider value={{ videos, createVideo, editVideo, handleTitleChange, handleDescriptionChange, handleAuthorChange, handleUrlChange }}>
       {children}
     </VideoContext.Provider>
   )

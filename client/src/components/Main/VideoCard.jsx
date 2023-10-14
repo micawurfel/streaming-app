@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './videoCard.css'
+// import './videoCard.css'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import VideoTitle from './VideoTitle'
 import Thumbnail from './Thumbnail'
