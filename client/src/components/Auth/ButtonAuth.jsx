@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styled from './Button.module.css'
+import styled from './Button.module.scss'
 
 export default function ButtonAuth(props) {
   return (

@@ -1,0 +1,44 @@
+.cardVideo{
+    width: 340px;
+    /* height: auto; */
+}
+
+.infoBox{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-align: left;
+    margin-top: 10px;
+    width: 100%;
+} 
+
+.avatar{
+    border-radius: 1.5em;
+    width: 3em;
+    height: 3em;
+    margin-right: 10px;
+}
+
+.title{
+    max-width: 250px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.author{
+    color: rgb(75,75,75);
+}
+
+.description{
+    color: rgb(75,75,75);
+}
+
+.button{
+    border: 1px solid black;
+    border-radius: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 1em;
+}

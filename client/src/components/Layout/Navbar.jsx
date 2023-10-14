@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ButtonAuth from '../Auth/ButtonAuth'
 import { Link } from 'react-router-dom'
 import { BsSearch } from 'react-icons/bs'
-import styled from './Navbar.module.css'
+import styled from './Navbar.module.scss'
 
 export default function Navbar() {
   const [userInfo, setUserInfo] = useState()
@@ -36,12 +36,14 @@ export default function Navbar() {
       <div>
         {userInfo !== '' && userInfo !== undefined
           ? <>
-            <Link to='/perfil'>
-              <button>Porfile</button>
-            </Link>
             <button onClick={logout}>Log out</button>
           </>
-          : <ButtonAuth to={'/login'} title="Login" />
+          : <>
+            <Link to='/profile'>
+              <button>Profile</button>
+            </Link>
+            <ButtonAuth to={'/login'} title="Login" />
+          </>
         }
       </div>
     </nav>

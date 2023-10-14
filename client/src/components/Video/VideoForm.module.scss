@@ -1,0 +1,27 @@
+.form {
+  padding: 1em;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.div{
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.input{
+  border: solid black 1px;
+  border-radius: 0.5em;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button{
+  border: solid black 1px;
+  border-radius: 0.5em;
+  padding: 10px;
+  color: black;
+  margin-top: 20px;
+  width: 5em;
+}

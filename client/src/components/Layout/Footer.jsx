@@ -1,6 +1,6 @@
 import React from 'react'
 import { BsFillSuitHeartFill } from 'react-icons/bs'
-import styled from './Footer.module.css'
+import styled from './Footer.module.scss'
 
 export default function Footer() {
   return (

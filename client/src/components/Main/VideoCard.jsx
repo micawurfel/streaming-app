@@ -1,33 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import './videoCard.css'
-import { BsThreeDotsVertical } from 'react-icons/bs'
-import VideoTitle from './VideoTitle'
+import styled from './VideoCard.module.scss'
 import Thumbnail from './Thumbnail'
 
 export default function VideoCard({ video }) {
   return (
-    <div className="cardVideo" style={{ width: '340px', height: '350px' }} key={video.id}>
+    <div className={styled.cardVideo} key={video.id}>
 
       <Thumbnail thumbnail={video.thumbnail} />
 
-      <div className="infoBox">
+      <div className={styled.infoBox}>
+
+        <img src={video.avatar} alt="" className={styled.avatar} />
 
         <Link to={`/video/${video.id}`}>
-
-          <img src={video.avatar} alt="" className="avatar" />
-          <div className="info">
-            <VideoTitle title={video.title} />
-            <p className="author"> {video.author}</p>
-            <p className="description">{video.reproductions} · {video.data} </p>
+          <div className={styled.info}>
+            <h1 className={styled.title} >{video.title}</h1>
+            <p className={styled.author}> {video.author}</p>
+            <p className={styled.description}> {video.reproductions} · {video.data} </p>
           </div>
 
         </Link>
 
-        <button className="btn"> <BsThreeDotsVertical /> </button>
-
       </div>
 
-    </div>
+    </div >
   )
 }

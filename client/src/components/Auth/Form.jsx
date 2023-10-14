@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuthContext } from '../../context/authContext'
-import styles from './Form.module.css'
+import styles from './Form.module.scss'
 
 export default function Form(props) {
   const { handleEmailChange, handlePasswordChange } = useAuthContext()
