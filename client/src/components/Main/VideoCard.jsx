@@ -17,7 +17,7 @@ export default function VideoCard({ video }) {
           <div className={styled.info}>
             <h1 className={styled.title} >{video.title}</h1>
             <p className={styled.author}> {video.author}</p>
-            <p className={styled.description}> {video.reproductions} · {video.data} </p>
+            <p className={styled.description}> {video.description} </p>
           </div>
 
         </Link>

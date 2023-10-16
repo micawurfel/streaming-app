@@ -1,7 +1,7 @@
-import videos from './videos.json'
+import VideosApi from './VideosApi'
 
 export class ApiService {
-  async getVideos () {
-    return await videos
+  getVideos () {
+    return VideosApi()
   }
 }

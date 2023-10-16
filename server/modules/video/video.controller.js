@@ -22,8 +22,8 @@ class VideoController {
 
   async createVideo (req, res) {
     try {
-      const { title, description, author, url } = req.body
-      const result = await videoService.createVideo({ title, description, author, url })
+      const { title, description, author, img, url } = req.body
+      const result = await videoService.createVideo({ title, description, author, img, url })
       res.status(200).json(result)
     } catch (error) {
       res.status(500).json({ error: error.message })
@@ -33,8 +33,8 @@ class VideoController {
   async updateVideo (req, res) {
     try {
       const { id } = req.params
-      const { title, description, author, url } = req.body
-      const newVideo = await videoService.updateVideo(id, { title, description, author, url })
+      const { title, description, author, url, img } = req.body
+      const newVideo = await videoService.updateVideo(id, { title, description, author, url, img })
       res.status(200).json(newVideo)
     } catch (error) {
       res.status(500).json({ error: error.message })

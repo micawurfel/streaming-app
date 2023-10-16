@@ -8,8 +8,9 @@ eslint
 react-router-dom
 react-icons
 react-player
-bootstrap
 react-bootstrap
+sass
+axios
 
 ## Server
 
@@ -19,3 +20,4 @@ router
 mongoose
 dotenv
 eslint
+cors

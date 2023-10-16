@@ -9,10 +9,12 @@ export const useVideoContext = () => useContext(VideoContext)
 export default function VideoContextProvider({ children }) {
   const apiService = new ApiService()
   const [videos, setVideos] = useState([])
+
   async function getVideos() {
     const response = await apiService.getVideos()
-    setVideos(response.videos)
+    setVideos(response)
   }
+
   useEffect(() => {
     getVideos()
   })

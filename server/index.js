@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 require('dotenv').config()
 const bodyParser = require('body-parser')
@@ -6,6 +7,7 @@ require('./modules/database/config')
 const videoRouter = require('./router/videoRouter')
 const userRouter = require('./router/userRouter')
 
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }))
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json())

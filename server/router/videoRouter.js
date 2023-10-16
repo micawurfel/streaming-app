@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const VideoController = require('video.controller')
+const VideoController = require('../modules/video/video.controller')
 
 router.get('/all', [], VideoController.getAllVideos)
 router.get('/:id', [], VideoController.getVideoById)

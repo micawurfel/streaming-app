@@ -5,7 +5,8 @@ const VideoSchema = new Schema({
   title: String,
   description: String,
   author: String,
-  url: String
+  url: String,
+  img: String
 })
 
 const Video = model('Video', VideoSchema)
