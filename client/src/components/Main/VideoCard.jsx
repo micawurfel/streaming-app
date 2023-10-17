@@ -5,15 +5,15 @@ import Thumbnail from './Thumbnail'
 
 export default function VideoCard({ video }) {
   return (
-    <div className={styled.cardVideo} key={video.id}>
+    <div className={styled.cardVideo} key={video._id}>
 
-      <Thumbnail thumbnail={video.thumbnail} />
+      <Thumbnail img={video.img} url={video.url} />
 
       <div className={styled.infoBox}>
 
         <img src={video.avatar} alt="" className={styled.avatar} />
 
-        <Link to={`/video/${video.id}`}>
+        <Link to={`/video/${video._id}`}>
           <div className={styled.info}>
             <h1 className={styled.title} >{video.title}</h1>
             <p className={styled.author}> {video.author}</p>

@@ -11,8 +11,8 @@ export default function VideoPage() {
 
   async function getVideos() {
     const response = await apiService.getVideos()
-    response.videos.forEach(element => {
-      if (Number(id) === element.id) {
+    response.forEach(element => {
+      if (id === element._id) {
         setVideo(element)
       } else {
         console.log('el id no existe')

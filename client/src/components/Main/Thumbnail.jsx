@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
-import prueba from '../../assets/videos/video-prueba.mp4'
 
 export default function Thumbnail(props) {
   const [hover, setHover] = useState(false)
@@ -18,22 +17,21 @@ export default function Thumbnail(props) {
   }
 
   return (
-    <div className='thumbnail'
+    <div
       onMouseEnter={handelMouseEnter}
       onMouseLeave={handelMouseLeave}
     >
 
       {hover === true
         ? <ReactPlayer
-          url={prueba}
-          // url={props.url}
+          url={props.url}
           loop
           playing
           width='330px'
           height='200px'
           muted
         />
-        : <img src={props.thumbnail} alt="" className='thumbnail' />
+        : <img src={props.img} alt="" />
       }
 
     </div>

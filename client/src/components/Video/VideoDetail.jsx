@@ -1,14 +1,12 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 import stayled from './VideoDetail.module.scss'
-import prueba from '../../assets/videos/video-prueba.mp4'
 
 export default function VideoDetail({ video }) {
   return (
     <>
       <ReactPlayer
-        url={prueba}
-        // url={props.url}
+        url={video.url}
         playing={true}
         controls
         width='75%'
