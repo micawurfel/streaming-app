@@ -13,12 +13,12 @@ import Navbar from './components/Layout/Navbar'
 import Footer from './components/Layout/Footer'
 
 function App () {
-  const { handleLogin, handleEmailChange, handlePasswordChange, handleRegister } = useAuthContext()
+  const { handleLogin, handleEmailChange, handlePasswordChange, handleRegister, handleLogout, userInfo } = useAuthContext()
   const { createVideo, editVideo, videos } = useVideoContext()
 
   return (
     <Router>
-      <AuthContextProvider value={{ handleLogin, handleEmailChange, handlePasswordChange, handleRegister }}>
+      <AuthContextProvider value={{ handleLogin, handleEmailChange, handlePasswordChange, handleRegister, handleLogout, userInfo }}>
       <VideoContextProvider value={{ createVideo, editVideo, videos }}>
         <Navbar/>
         <div style={{ minHeight: '100vh' }}>

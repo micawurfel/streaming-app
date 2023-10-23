@@ -21,3 +21,6 @@ mongoose
 dotenv
 eslint
 cors
+jsonwebtoken
+bcryptjs
+cookie-parser

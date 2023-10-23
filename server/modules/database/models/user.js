@@ -12,6 +12,8 @@ const UserSchema = new Schema({
     require: true,
     min: 6
   }
+}, {
+  versionKey: false
 })
 
 const User = model('User', UserSchema)

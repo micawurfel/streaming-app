@@ -17,7 +17,7 @@ export default function VideoContextProvider({ children }) {
 
   useEffect(() => {
     getVideos()
-  })
+  }, [])
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
